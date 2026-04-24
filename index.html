@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DCF Expresso — Laudo de valuation em 24h | R$29</title>
+<meta name="description" content="Avaliação DCF educacional/preliminar pronta em 24h. Ideal para TCC, trabalhos de aula e estudo de caso. R$29.">
+<meta name="keywords" content="DCF, valuation, TCC finanças, MBA, avaliação empresa, discounted cash flow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="DCF Expresso — Laudo de valuation em 24h">
+<meta property="og:description" content="Avaliação DCF educacional pronta em 24h por R$29. Para TCC, trabalhos e estudo de caso.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --bg: #ffffff;
+    --surface: #fafaf9;
+    --text: #1a1a1a;
+    --text-muted: #6b7280;
+    --text-subtle: #9ca3af;
+    --accent: #0d5c4b;
+    --accent-hover: #094036;
+    --accent-light: #e8f3f0;
+    --border: #e5e7eb;
+    --amber: #f59e0b;
+    --amber-light: #fef3c7;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* ========== NAV ========== */
+  nav {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+
+  .logo span {
+    color: var(--accent);
+  }
+
+  nav .nav-cta {
+    font-size: 14px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  nav .nav-cta:hover {
+    color: var(--accent);
+  }
+
+  /* ========== HERO ========== */
+  .hero {
+    padding: 64px 0 48px;
+    text-align: center;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 6px 14px;
+    background: var(--amber-light);
+    color: #92400e;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    color: var(--text);
+  }
+
+  .hero .subtitle {
+    font-size: 19px;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-primary {
+    display: inline-block;
+    padding: 14px 32px;
+    background: var(--accent);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background 0.15s ease, transform 0.1s ease;
+  }
+
+  .cta-primary:hover {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+  }
+
+  .cta-primary .arrow {
+    display: inline-block;
+    margin-left: 6px;
+    transition: transform 0.15s ease;
+  }
+
+  .cta-primary:hover .arrow {
+    transform: translateX(3px);
+  }
+
+  .cta-subtext {
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--text-subtle);
+  }
+
+  /* ========== SECTIONS ========== */
+  section {
+    padding: 56px 0;
+    border-top: 1px solid var(--border);
+  }
+
+  h2 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+    color: var(--text);
+  }
+
+  h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+
+  p.lead {
+    font-size: 17px;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+  }
+
+  /* ========== WHAT YOU GET ========== */
+  .deliverable-list {
+    list-style: none;
+    display: grid;
+    gap: 14px;
+  }
+
+  .deliverable-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+
+  .deliverable-list .check {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+  }
+
+  .deliverable-list .check::before {
+    content: '';
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg) translate(-1px, -1px);
+  }
+
+  .deliverable-list .text h3 {
+    margin-bottom: 4px;
+  }
+
+  .deliverable-list .text p {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* ========== HOW IT WORKS ========== */
+  .steps {
+    display: grid;
+    gap: 20px;
+  }
+
+  .step {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+  }
+
+  .step-num {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    background: var(--accent-light);
+    color: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .step-content h3 {
+    margin-bottom: 4px;
+  }
+
+  .step-content p {
+    color: var(--text-muted);
+    font-size: 15px;
+  }
+
+  /* ========== WHO FOR ========== */
+  .for-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .for-card {
+    padding: 24px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+  }
+
+  .for-card.yes {
+    background: var(--accent-light);
+    border-color: var(--accent-light);
+  }
+
+  .for-card.no {
+    background: #fef2f2;
+    border-color: #fee2e2;
+  }
+
+  .for-card h3 {
+    margin-bottom: 12px;
+    font-size: 16px;
+  }
+
+  .for-card.yes h3 {
+    color: var(--accent);
+  }
+
+  .for-card.no h3 {
+    color: #b91c1c;
+  }
+
+  .for-card ul {
+    list-style: none;
+    display: grid;
+    gap: 8px;
+  }
+
+  .for-card li {
+    font-size: 14px;
+    color: var(--text);
+    padding-left: 18px;
+    position: relative;
+  }
+
+  .for-card.yes li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .for-card.no li::before {
+    content: '✕';
+    position: absolute;
+    left: 0;
+    color: #b91c1c;
+    font-weight: 700;
+  }
+
+  /* ========== METHODOLOGY ========== */
+  .method {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px 28px;
+  }
+
+  .method ul {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+  }
+
+  .method li {
+    font-size: 15px;
+    color: var(--text);
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .method li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+
+  .method .source {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  /* ========== PRICING ========== */
+  .price-box {
+    text-align: center;
+    padding: 40px 24px;
+    background: var(--surface);
+    border: 2px solid var(--accent);
+    border-radius: 14px;
+  }
+
+  .price-tag {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: -0.03em;
+  }
+
+  .price-tag .currency {
+    font-size: 28px;
+    vertical-align: top;
+    margin-right: 2px;
+  }
+
+  .price-desc {
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    font-size: 15px;
+  }
+
+  /* ========== FAQ ========== */
+  .faq-item {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .faq-item:last-child {
+    border-bottom: none;
+  }
+
+  .faq-item h3 {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+
+  .faq-item p {
+    color: var(--text-muted);
+    font-size: 15px;
+  }
+
+  /* ========== FINAL CTA ========== */
+  .final-cta {
+    text-align: center;
+    padding: 64px 0;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .final-cta h2 {
+    margin-bottom: 12px;
+  }
+
+  .final-cta p {
+    color: var(--text-muted);
+    font-size: 17px;
+    margin-bottom: 24px;
+  }
+
+  /* ========== FOOTER ========== */
+  footer {
+    padding: 40px 0;
+    font-size: 13px;
+    color: var(--text-subtle);
+    line-height: 1.6;
+  }
+
+  footer .disclaimer {
+    padding: 16px 20px;
+    background: var(--surface);
+    border-radius: 8px;
+    margin-bottom: 24px;
+    color: var(--text-muted);
+  }
+
+  footer .disclaimer strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  footer .foot-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  footer a {
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    color: var(--accent);
+  }
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 640px) {
+    h1 {
+      font-size: 34px;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    .hero {
+      padding: 48px 0 32px;
+    }
+
+    section {
+      padding: 40px 0;
+    }
+
+    .for-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .price-tag {
+      font-size: 40px;
+    }
+
+    .price-tag .currency {
+      font-size: 24px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="#" class="logo">DCF<span>.</span>Expresso</a>
+    <a href="#comprar" class="nav-cta">Solicitar laudo →</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="badge">Avaliação educacional/preliminar</div>
+    <h1>Laudo de valuation<br>DCF pronto em 24h</h1>
+    <p class="subtitle">
+      Para seu TCC, trabalho de aula ou estudo de caso em finanças.
+      Metodologia DCF + múltiplos + due diligence, entregue por e-mail.
+    </p>
+    <a href="https://hezequias.gumroad.com/l/dcf-expresso" class="cta-primary">
+      Solicitar laudo — R$29
+      <span class="arrow">→</span>
+    </a>
+    <p class="cta-subtext">Pagamento via PIX, cartão ou boleto</p>
+  </div>
+</header>
+
+<section id="entrega">
+  <div class="container">
+    <h2>O que você recebe</h2>
+    <p class="lead">Um laudo completo em email estruturado, com todos os cálculos explicados.</p>
+
+    <ul class="deliverable-list">
+      <li>
+        <div class="check"></div>
+        <div class="text">
+          <h3>Avaliação DCF com projeção de 10 anos</h3>
+          <p>Fluxos descontados, terminal value via Gordon Growth, equity value ajustado por dívida.</p>
+        </div>
+      </li>
+      <li>
+        <div class="check"></div>
+        <div class="text">
+          <h3>Múltiplos setoriais (EV/EBITDA, P/S, P/E)</h3>
+          <p>Comparativo com 9 setores mapeados: tech, saas, fintech, crypto, healthcare, energy, retail, agri, real estate.</p>
+        </div>
+      </li>
+      <li>
+        <div class="check"></div>
+        <div class="text">
+          <h3>Due diligence score (0-100)</h3>
+          <p>Avaliação financeira, legal, operacional e de mercado, com red/green flags.</p>
+        </div>
+      </li>
+      <li>
+        <div class="check"></div>
+        <div class="text">
+          <h3>Análise de sensibilidade</h3>
+          <p>Grid 3×3 mostrando como o valuation muda com variações de WACC (±2pp) e growth (±1pp).</p>
+        </div>
+      </li>
+      <li>
+        <div class="check"></div>
+        <div class="text">
+          <h3>Valor justo ponderado + range</h3>
+          <p>Blended fair value (DCF 45% + Múltiplos 35% + Book 20%) com intervalo ±20%.</p>
+        </div>
+      </li>
+      <li>
+        <div class="check"></div>
+        <div class="text">
+          <h3>Disclaimer educacional transparente</h3>
+          <p>Limitações metodológicas explícitas. Sem firula: você sabe exatamente o escopo.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="como-funciona">
+  <div class="container">
+    <h2>Como funciona</h2>
+    <p class="lead">4 passos simples. Zero cadastro, zero assinatura.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h3>Pagamento</h3>
+          <p>R$29 via PIX, cartão ou boleto no checkout Gumroad.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h3>Formulário</h3>
+          <p>Você recebe por email um formulário simples pra preencher os dados da empresa (receita, EBITDA, setor, etc).</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h3>Processamento</h3>
+          <p>Rodamos os motores de cálculo (DCF + Múltiplos + Due Diligence) com seus inputs.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h3>Entrega em até 24h</h3>
+          <p>Você recebe o laudo completo por email, com todos os cálculos explicados.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="para-quem">
+  <div class="container">
+    <h2>Para quem é (e não é)</h2>
+
+    <div class="for-grid">
+      <div class="for-card yes">
+        <h3>✓ Ideal para</h3>
+        <ul>
+          <li>TCC de finanças, administração, economia</li>
+          <li>Trabalhos de MBA ou graduação</li>
+          <li>Estudo de caso pessoal</li>
+          <li>Aprender metodologia DCF na prática</li>
+          <li>Primeiro screening de uma empresa</li>
+          <li>Comparar valuation com colegas de curso</li>
+        </ul>
+      </div>
+      <div class="for-card no">
+        <h3>✕ Não é para</h3>
+        <ul>
+          <li>Pitch book de banco de investimento</li>
+          <li>Due diligence formal de M&A</li>
+          <li>Laudo para órgão regulador (CVM, etc)</li>
+          <li>Decisão de investimento definitiva</li>
+          <li>Substituir consultor financeiro profissional</li>
+          <li>Reembolso corporativo (não emitimos NF)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="metodologia">
+  <div class="container">
+    <h2>Metodologia</h2>
+    <p class="lead">Transparência total sobre como o laudo é produzido.</p>
+
+    <div class="method">
+      <ul>
+        <li><strong>DCF:</strong> Projeção de 10 anos, growth decay anual 5% (ano N = ano N-1 × 0.95), terminal value via Gordon Growth Model.</li>
+        <li><strong>Free Cash Flow proxy:</strong> 65% do EBITDA (shortcut aceito em valuations preliminares).</li>
+        <li><strong>WACC setorial:</strong> Tech 12%, SaaS 14%, Fintech 13%, Crypto 20%, Healthcare 9%, Energy 10%, Real Estate 8%, Retail 10%, Agri 10%.</li>
+        <li><strong>Terminal growth:</strong> 2-4% conforme setor (maduros 2%, crescentes 4%, padrão 3%).</li>
+        <li><strong>Múltiplos:</strong> Média de EV/EBITDA, P/Sales e P/E quando aplicáveis, ajustados por dívida.</li>
+        <li><strong>Blended value:</strong> DCF 45% + Múltiplos 35% + Book value 20%.</li>
+        <li><strong>Due Diligence:</strong> 4 dimensões (financial, legal, operational, market), scoring determinístico por empresa.</li>
+      </ul>
+
+      <div class="source">
+        Base teórica: princípios de Damodaran (NYU Stern), McKinsey Valuation, e prática CFA.
+        <br>Simplificações explícitas para uso educacional.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="comprar">
+  <div class="container">
+    <h2>Pronto para começar?</h2>
+
+    <div class="price-box">
+      <div class="price-tag">
+        <span class="currency">R$</span>29
+      </div>
+      <p class="price-desc">Um laudo completo. Uma empresa. Até 24h de entrega.</p>
+      <a href="https://hezequias.gumroad.com/l/dcf-expresso" class="cta-primary" id="gumroad-link">
+        Pagar e solicitar laudo
+        <span class="arrow">→</span>
+      </a>
+      <p class="cta-subtext" style="margin-top: 16px;">
+        PIX · Cartão de crédito · Boleto
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <h2>Perguntas frequentes</h2>
+
+    <div class="faq-item">
+      <h3>Serve pro meu TCC?</h3>
+      <p>Sim, desde que o objetivo seja aplicar metodologia DCF em um estudo de caso. Cite o laudo como "avaliação preliminar por metodologia DCF padrão" e use como base pra sua análise crítica própria.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Vocês são CFA, CVM ou consultor certificado?</h3>
+      <p>Não. Este é um serviço educacional/preliminar, não um laudo formal de profissional registrado. Use como ferramenta de aprendizado e primeiro screening, não como parecer oficial.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Vocês emitem nota fiscal?</h3>
+      <p>Não. O DCF Expresso é operado por pessoa física (CPF) e não emite NF. Se você precisa de NF para reembolso corporativo, recomendamos buscar consultoria formal em valuation. O recibo/comprovante do Gumroad serve como comprovante de compra para fins pessoais.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Vou receber em PDF?</h3>
+      <p>Atualmente o laudo é entregue em email estruturado (texto + tabelas). Versão PDF está em desenvolvimento e será disponibilizada sem custo adicional pra quem já comprou.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>E se eu errar os dados da empresa?</h3>
+      <p>Você pode solicitar recálculo gratuito uma vez (desde que os novos dados sejam da mesma empresa). Para novas empresas, é nova compra.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>O que acontece se eu não tiver todos os dados?</h3>
+      <p>Os dados obrigatórios são: nome da empresa, receita anual, EBITDA e setor. Outros (dívida, market cap, growth rate) são opcionais — se não informar, usamos defaults setoriais razoáveis.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Qual o prazo real de entrega?</h3>
+      <p>Até 24h corridas após a confirmação do pagamento. Na prática, a maioria dos pedidos sai em 4-8h durante horário comercial (BRT).</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Posso pedir reembolso?</h3>
+      <p>Sim, até 7 dias corridos após a compra, se o laudo ainda não foi entregue. Via Gumroad (processo padrão).</p>
+    </div>
+  </div>
+</section>
+
+<div class="final-cta">
+  <div class="container">
+    <h2>Valuation em 24h, por R$29.</h2>
+    <p>Sem cadastro. Sem assinatura. Paga, preenche, recebe.</p>
+    <a href="https://hezequias.gumroad.com/l/dcf-expresso" class="cta-primary">
+      Começar agora
+      <span class="arrow">→</span>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="disclaimer">
+      <strong>Aviso legal:</strong> DCF Expresso é uma iniciativa de pessoa física (CPF), operada de forma independente. <strong>Não emitimos nota fiscal.</strong> Oferecemos avaliações educacionais/preliminares baseadas em metodologia DCF simplificada e múltiplos setoriais. Os laudos <strong>não substituem</strong> due diligence profissional, laudo de avaliação formal, parecer de consultor financeiro certificado ou qualquer documento oficial para órgãos reguladores. Os resultados dependem inteiramente da qualidade dos dados fornecidos pelo cliente. Este serviço <strong>não é</strong> recomendação de investimento.
+    </div>
+    <div class="foot-row">
+      <div>© 2026 DCF Expresso</div>
+      <div>
+        Contato: <a href="mailto:hezequiaslima@gmail.com">hezequiaslima@gmail.com</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
